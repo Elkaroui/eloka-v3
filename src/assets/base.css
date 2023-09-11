@@ -1,0 +1,32 @@
+/* New style */
+.listings-scroll {
+  position: relative; /* Relative positioning for the container */
+  overflow: hidden; /* Hide overflow */
+}
+
+.listings-scroll-inner {
+  position: relative; /* Relative positioning for the inner content */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  margin-right: -4px; /* Compensate for the scrollbar width */
+  padding-right: 4px; /* Add padding to avoid content being clipped */
+}
+
+.listings-scroll::-webkit-scrollbar {
+  width: 4px;
+  cursor: pointer;
+}
+
+.listings-scroll::-webkit-scrollbar-track {
+  background: transparent; /* Make the track transparent */
+}
+
+.listings-scroll::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: hsla(214, 20%, 69%, 0.4);
+}
+
+.listings-scroll::-webkit-resizer,
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  display: none;
+}
